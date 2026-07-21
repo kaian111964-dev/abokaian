@@ -1,0 +1,6 @@
+{
+  "name": "منصة ابوكيان الرقمية",
+  "description": "منصة أبو كيان الرقمية الشاملة لخدمات الدعاية والإعلان، البرمجيات، الذكاء الاصطناعي، والحلول الرقمية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
