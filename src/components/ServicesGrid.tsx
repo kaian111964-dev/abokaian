@@ -59,7 +59,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({
       </div>
 
       {/* Services Grid (2 Columns on mobile, 4 Columns on md/lg) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-6">
         {services.map((service) => {
           const currentHover = hoveredRating?.serviceId === service.id ? hoveredRating.star : 0;
 
@@ -67,7 +67,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({
             <div
               key={service.id}
               onClick={() => onSelectService(service)}
-              className="group relative bg-white/90 backdrop-blur-xl rounded-[24px] p-5 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col items-center justify-between text-center min-h-[230px] overflow-hidden"
+              className="group relative bg-white/90 backdrop-blur-xl rounded-[18px] sm:rounded-[24px] p-3 sm:p-5 border border-gray-100 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer flex flex-col items-center justify-between text-center min-h-[200px] sm:min-h-[230px] overflow-hidden"
             >
               {/* Top Hover Ripple Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>

@@ -94,10 +94,12 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onEnterPlatform })
           
           {/* CARD 1: WELCOME CUSTOMERS */}
           <div className="bg-white/90 backdrop-blur-md rounded-2xl p-5 border border-blue-100/80 shadow-md shadow-blue-500/5 space-y-3 relative overflow-hidden hover:border-blue-300 transition-all hover:-translate-y-1">
-            <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0A4DFF] border border-blue-100 flex items-center justify-center shadow-2xs">
-              <Sparkles className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0A4DFF] border border-blue-100 flex items-center justify-center shadow-2xs mx-auto">
+              <Sparkles className="w-5 h-5 animate-spin-slow text-[#0A4DFF]" />
             </div>
-            <h3 className="text-base font-bold text-slate-900 font-['Cairo']">بطاقة ترحيب بالعملاء</h3>
+            <h3 className="text-base sm:text-lg font-black text-center font-['Cairo'] bg-gradient-to-r from-[#062B7F] via-[#0A4DFF] to-[#0044CC] bg-clip-text text-transparent">
+              مرحباً بكم في منصتنا الرقمية.
+            </h3>
             <p className="text-xs text-gray-600 leading-relaxed font-medium">
               نسعد بانضمامكم واختياركم لمنصتنا. نقدم لكم حلولاً تسويقية وبرمجية متكاملة بلمسة احترافية تعزز حضوركم الرقمي وتضاعف نتائج أعمالكم.
             </p>

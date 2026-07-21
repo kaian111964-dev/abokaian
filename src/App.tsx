@@ -232,7 +232,7 @@ export default function App() {
             onRateService={handleRateService}
           />
         ) : (
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-28 space-y-6">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 pt-3 sm:pt-4 pb-28 space-y-4 sm:space-y-6 overflow-x-hidden">
             
             {/* TAB 11: USER DASHBOARD PAGE (لوحة تحكم المستخدم والحساب) */}
             {activeTab === 'dashboard' && (
