@@ -12,7 +12,7 @@ export const BottomNavigation: React.FC<BottomNavigationProps> = ({ activeTab, o
     { id: 'about', label: 'من نحن', icon: Users },
     { id: 'store', label: 'متجر', icon: ShoppingBag },
     { id: 'contact', label: 'اتصل بنا', icon: PhoneCall },
-    { id: 'assistant', label: 'المساعد', icon: Briefcase }
+    { id: 'assistant', label: 'المساعد', icon: Bot }
   ];
 
   return (

@@ -19,7 +19,8 @@ import {
   CheckCircle2,
   Coins,
   ShieldCheck,
-  Zap
+  Zap,
+  GraduationCap
 } from 'lucide-react';
 import { User } from '../types';
 import { PLATFORM_INFO } from '../data/mockData';
@@ -50,6 +51,8 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
 
   const menuItems = [
     { id: 'home', label: 'الرئيسية', icon: Home },
+    { id: 'assistant', label: 'المساعد الذكي والاستشارات', icon: Sparkles },
+    { id: 'education', label: 'الخدمات التعليمية والأكاديمية', icon: GraduationCap },
     { id: 'dashboard', label: 'لوحة تحكم المستخدم والحساب', icon: UserIcon },
     { id: 'clients', label: 'أبرز عملائنا الأوفياء', icon: Crown },
     { id: 'store', label: 'متجر التطبيقات والألعاب', icon: ShoppingBag },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Sparkles, Crown, Radio, Wifi, Briefcase, CheckCircle2, ShoppingBag, Gamepad2, Zap, Smartphone } from 'lucide-react';
+import { ArrowLeft, Sparkles, Crown, Radio, Wifi, Briefcase, CheckCircle2, ShoppingBag, Gamepad2, Zap, Smartphone, GraduationCap, BookOpen, Users, Award, School } from 'lucide-react';
 
 interface FeaturedBannersProps {
   onSelectTab: (tab: string) => void;
@@ -231,6 +231,64 @@ export const FeaturedBanners: React.FC<FeaturedBannersProps> = ({ onSelectTab })
 
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0A4DFF] to-blue-800 border-2 border-amber-400/80 text-amber-300 flex items-center justify-center shrink-0 shadow-xl shadow-blue-900/40 group-hover:rotate-6 transition-transform">
               <ShoppingBag className="w-8 h-8" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      {/* NEW Full Width Card: الخدمات التعليمية (Located right under المتجر الإلكتروني as requested) */}
+      <div 
+        onClick={() => onSelectTab('education')}
+        className="relative rounded-[28px] p-6 bg-gradient-to-r from-[#061B42] via-[#062B7F] to-[#0A4DFF] text-white shadow-2xl shadow-blue-950/30 hover:shadow-blue-600/30 hover:scale-[1.008] transition-all duration-300 cursor-pointer overflow-hidden group border-2 border-blue-400/50"
+      >
+        {/* Ambient Glows */}
+        <div className="absolute -left-12 -bottom-12 w-56 h-56 bg-blue-400/20 rounded-full blur-3xl group-hover:scale-125 transition-transform"></div>
+        <div className="absolute right-10 top-0 bottom-0 w-1/3 bg-white/5 skew-x-12 pointer-events-none"></div>
+
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+          
+          {/* Action Left Button & Badge */}
+          <div className="flex items-center justify-between md:justify-start gap-3">
+            <div className="w-12 h-12 rounded-2xl bg-blue-500/20 backdrop-blur-md border border-blue-300/40 flex items-center justify-center text-amber-300 group-hover:bg-amber-400 group-hover:text-slate-950 transition-all shadow-lg shrink-0">
+              <ArrowLeft className="w-6 h-6" />
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-[11px] font-black text-[#062B7F] bg-amber-300 px-3 py-1 rounded-full shadow-sm flex items-center gap-1">
+                <GraduationCap className="w-4 h-4 text-[#062B7F]" />
+                منظومة تعليمية 2026
+              </span>
+              <span className="text-xs text-blue-200 font-bold hidden sm:inline-block">تصفح كافة الأقسام والمواد</span>
+            </div>
+          </div>
+
+          {/* Right Side Header & Details */}
+          <div className="flex items-center gap-4 text-right">
+            <div className="flex flex-col items-end">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-md uppercase tracking-wider">
+                  شامل ومطوّر
+                </span>
+                <h3 className="text-xl sm:text-2xl font-black font-['Cairo'] tracking-wide text-white group-hover:text-amber-300 transition-colors">
+                  الخدمات التعليمية
+                </h3>
+              </div>
+
+              <p className="text-xs text-blue-100 font-semibold mb-2">
+                للمدارس والمعاهد والجامعات • للطلاب والمعلمين وأولياء الأمور وللخريجين
+              </p>
+
+              {/* Category Badges */}
+              <div className="flex items-center flex-wrap justify-end gap-1.5 text-[11px] font-bold text-blue-100">
+                <span className="bg-white/10 px-2 py-0.5 rounded-md border border-white/15">الطلاب (ملخصات ومناهج)</span>
+                <span className="bg-white/10 px-2 py-0.5 rounded-md border border-white/15">المعلمون (خطط وحصص)</span>
+                <span className="bg-white/10 px-2 py-0.5 rounded-md border border-white/15">الخريجون وأولياء الأمور</span>
+              </div>
+            </div>
+
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center shrink-0 shadow-xl shadow-amber-500/20 group-hover:scale-110 transition-transform">
+              <School className="w-9 h-9 text-slate-950" />
             </div>
           </div>
 

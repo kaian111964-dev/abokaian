@@ -27,6 +27,8 @@ import { AssistantModal } from './components/AssistantModal';
 import { SearchModal } from './components/SearchModal';
 import { MenuDrawer } from './components/MenuDrawer';
 import { UserDashboardView } from './components/UserDashboardView';
+import { EducationView } from './components/EducationView';
+import { AssistantView } from './components/AssistantView';
 
 import { 
   HERO_SLIDES, 
@@ -211,7 +213,7 @@ export default function App() {
         notifications={notifications}
         onOpenNotifications={() => setIsNotificationsOpen(true)}
         onOpenSearch={() => setIsSearchOpen(true)}
-        onOpenAssistant={() => setIsAssistantOpen(true)}
+        onOpenAssistant={() => handleTabChange('assistant')}
         onOpenMenu={() => setIsMenuOpen(true)}
         onOpenWhatsApp={handleOpenWhatsApp}
         onGoHome={() => handleTabChange('home')}
@@ -234,6 +236,22 @@ export default function App() {
         ) : (
           <div className="max-w-7xl mx-auto px-3 sm:px-6 pt-3 sm:pt-4 pb-28 space-y-4 sm:space-y-6 overflow-x-hidden">
             
+            {/* TAB 12: DEDICATED FULL-PAGE AI ASSISTANT (المساعد الذكي والاستشارات التقنية) */}
+            {activeTab === 'assistant' && (
+              <AssistantView 
+                onBackToHome={() => handleTabChange('home')} 
+                onOpenWhatsApp={handleOpenWhatsApp} 
+              />
+            )}
+
+            {/* TAB 13: DEDICATED FULL-PAGE EDUCATIONAL SERVICES (منظومة الخدمات والحلول التعليمية) */}
+            {activeTab === 'education' && (
+              <EducationView 
+                onBackToHome={() => handleTabChange('home')} 
+                onOpenWhatsApp={handleOpenWhatsApp} 
+              />
+            )}
+
             {/* TAB 11: USER DASHBOARD PAGE (لوحة تحكم المستخدم والحساب) */}
             {activeTab === 'dashboard' && (
               <UserDashboardView 
@@ -309,7 +327,7 @@ export default function App() {
             )}
 
             {/* TAB 8: CONTACT US (اتصل بنا) */}
-            {(activeTab === 'contact' || activeTab === 'assistant') && (
+            {activeTab === 'contact' && (
               <ContactView onOpenWhatsApp={handleOpenWhatsApp} />
             )}
 
@@ -330,13 +348,7 @@ export default function App() {
       {/* Floating Bottom Navigation Bar */}
       <BottomNavigation
         activeTab={selectedService ? 'home' : (activeTab === 'offers' || activeTab === 'ai' || activeTab === 'wifi' || activeTab === 'live' || activeTab === 'portfolio' ? 'home' : activeTab)}
-        onTabChange={(tab) => {
-          if (tab === 'assistant') {
-            setIsAssistantOpen(true);
-          } else {
-            handleTabChange(tab);
-          }
-        }}
+        onTabChange={(tab) => handleTabChange(tab)}
       />
 
       {/* Service Request Detail Modal (Fallback) */}
